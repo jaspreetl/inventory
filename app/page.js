@@ -172,7 +172,7 @@ export default function Home() {
           justifyContent='center'
           alignItems='center' align='center'>
           <Typography variant='caption'>
-            Hello and welcome! We're excited to have you here. This platform is designed to simplify your grocery shopping experience by helping you keep track of all your inventory items in one convenient place. Whether you're managing a bustling household or planning meals for the week, our tool will help you stay organized and ensure you never run out of your favorite ingredients.
+            Welcome! We're excited to have you here. This platform is designed to simplify your grocery shopping experience by helping you keep track of all your inventory items in one convenient place. Whether you're managing a bustling household or planning meals for the week, our tool will help you stay organized and ensure you never run out of your favorite ingredients.
           </Typography>
         </Box>
 
