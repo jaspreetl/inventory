@@ -109,9 +109,7 @@ export default function Home() {
           </Stack>
         </Box>
       </Modal>
-      <Button variant='contained' onClick={() => {
-        handleOpen()
-      }}>Add New Item</Button>
+
       <Box border='1px solid #333'>
         <Box
           width='800px' height='100px'
@@ -121,7 +119,7 @@ export default function Home() {
           alignItems='center'
         >
           <Typography variant='h2' color='#333' >
-            Inventory Items
+            Grocery List
           </Typography>
         </Box>
 
@@ -164,6 +162,20 @@ export default function Home() {
           }
         </Stack>
       </Box>
+      <Button variant='text' onClick={() => {
+        handleOpen()
+        }}>Add New Item
+      </Button>
+      <Box
+          width='900px'
+          display='flex'
+          justifyContent='center'
+          alignItems='center' align='center'>
+          <Typography variant='caption'>
+            Hello and welcome! We're excited to have you here. This platform is designed to simplify your grocery shopping experience by helping you keep track of all your inventory items in one convenient place. Whether you're managing a bustling household or planning meals for the week, our tool will help you stay organized and ensure you never run out of your favorite ingredients.
+          </Typography>
+        </Box>
+
     </Box>
   )
 }
