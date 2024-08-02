@@ -9,7 +9,6 @@ export default function Home() {
   const [inventory, setInventory] = useState([])
   const [open, setOpen] = useState(false)
   const [itemName, setItemName] = useState('')
-
   const updateInventory = async () => {
     const snapshot = query(collection(firestore, 'inventory'))
     const docs = await getDocs(snapshot)
@@ -123,7 +122,9 @@ export default function Home() {
           </Typography>
         </Box>
 
-        <Stack width="800px" height="300px" spacing={2} overflow= "auto">
+
+
+        <Stack width="800px" height="300px" spacing={2} overflow="auto">
           {inventory.map(({ name, quantity }) => (
             <Box
               key={name}
@@ -155,7 +156,7 @@ export default function Home() {
                     removeItem(name)
                   }}>
                   -
-                </Button> 
+                </Button>
               </Stack>
             </Box>
           ))
@@ -164,19 +165,18 @@ export default function Home() {
       </Box>
       <Button variant='text' onClick={() => {
         handleOpen()
-        }}>Add New Item
+      }}>Add New Item
       </Button>
       <Box
-          width='900px'
-          display='flex'
-          justifyContent='center'
-          alignItems='center' align='center'>
-          <Typography variant='caption'>
-            Welcome! We're excited to have you here. This platform is designed to simplify your grocery shopping experience by helping you keep track of all your inventory items in one convenient place. Whether you're managing a bustling household or planning meals for the week, our tool will help you stay organized and ensure you never run out of your favorite ingredients.
-          </Typography>
-        </Box>
+        width='900px'
+        display='flex'
+        justifyContent='center'
+        alignItems='center' align='center'>
+        <Typography variant='caption'>
+          Welcome! We're excited to have you here. This platform is designed to simplify your grocery shopping experience by helping you keep track of all your inventory items in one convenient place. Whether you're managing a bustling household or planning meals for the week, our tool will help you stay organized and ensure you never run out of your favorite ingredients.
+        </Typography>
+      </Box>
 
     </Box>
   )
 }
- 
